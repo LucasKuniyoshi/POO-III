@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>detalhar</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item> <!-- ngModel => linka com as variaveis criadas na ts-->
+      <ion-input label="Nome:" [(ngModel)]="nome"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input label="Telefone:" type="number" [(ngModel)]="telefone"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input label="Email:" type="string" [(ngModel)]="email"></ion-input>
+    </ion-item>
+    <ion-button expand="block">Salvar</ion-button> 
+  </ion-list>
+</ion-content>

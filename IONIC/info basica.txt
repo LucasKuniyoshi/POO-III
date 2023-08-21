@@ -1,0 +1,23 @@
+[translucent]="true"
+[fullscreen]="true"
+ion-content => <body></body>
+ionic serve = npm start
+<br/>
+https://ionicframework.com/docs/components
+ionic g (cria componentes)
+OnDestoyer = faz a pergunta ao clicar em "fechar" se ele quer mesmo fechar, mesmo sabendo q ira perder os dados n salvos.
+
+<!--body-->
+<ion-content> 
+
+  <br/>
+  <!--*ngFor => loop-->
+  <ion-list><!-- i recebe "zero" e vai até o ultimo contato-->
+    <ion-item>
+      <ion-label>{{contato.nome}}</ion-label>
+      <ion-label>{{contato.telefone}}</ion-label>
+      <ion-label>{{contato.email}}</ion-label>
+    </ion-item>
+  </ion-list>
+
+</ion-content>
