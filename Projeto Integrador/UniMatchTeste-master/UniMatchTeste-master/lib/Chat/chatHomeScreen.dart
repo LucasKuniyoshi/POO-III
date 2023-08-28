@@ -20,7 +20,7 @@ class _ChatHomeScreenState extends State<ChatHomeScreen> {
           icon: Icon(Icons.arrow_back),
           iconSize: 30.0,
           color: Colors.white,
-          onPressed: (){},
+          onPressed: () {},
         ),
         title: Text(
           'Chat',
@@ -35,7 +35,7 @@ class _ChatHomeScreenState extends State<ChatHomeScreen> {
             icon: Icon(Icons.search),
             iconSize: 30.0,
             color: Colors.white,
-            onPressed: (){},
+            onPressed: () {},
           ),
         ],
       ),
@@ -43,21 +43,21 @@ class _ChatHomeScreenState extends State<ChatHomeScreen> {
         children: <Widget>[
           CategorySelector(),
           Expanded(
-              child: Container(
-                decoration: BoxDecoration(
-                  color: Theme.of(context).accentColor,
-                  borderRadius: BorderRadius.only(
-                    topLeft: Radius.circular(30.0),
-                    topRight: Radius.circular(30.0),
-                  ),
-                ),
-                child: Column(
-                  children: [
-                    MatchesFavoritos(),
-                    ChatsRecentes(),
-                  ],
+            child: Container(
+              decoration: BoxDecoration(
+                color: Theme.of(context).colorScheme.secondary,
+                borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(30.0),
+                  topRight: Radius.circular(30.0),
                 ),
               ),
+              child: Column(
+                children: [
+                  MatchesFavoritos(),
+                  ChatsRecentes(),
+                ],
+              ),
+            ),
           ),
         ],
       ),
