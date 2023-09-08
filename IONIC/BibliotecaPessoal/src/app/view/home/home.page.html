@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+    Biblioteca
+     <ion-icon name="book"></ion-icon>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<!--body-->
+<ion-content> 
+
+ 
+  
+  <ion-list *ngFor="let livro of lista_livros;">
+    <ion-item (click)="editar(livro)">
+      <ion-label>{{livro.nome}} </ion-label>
+    
+    </ion-item>
+  </ion-list>
+  
+  <ion-fab horizontal="end" vertical="bottom">
+    <ion-fab-button (click)="irParaCadastrar()" >
+      <ion-icon name="add-circle-outline"></ion-icon>
+
+    </ion-fab-button>
+  </ion-fab>
+  
+
+
+</ion-content>

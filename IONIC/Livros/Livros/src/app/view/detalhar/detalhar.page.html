@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>detalhar</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-toggle (ionChange)="habilitar()">Habilitar Edição</ion-toggle>
+    </ion-item>
+    <ion-item> <!-- ngModel => linka com as variaveis criadas na ts-->
+      <ion-input label="Nome:" [(ngModel)]="nome" disabled="{{edicao}}"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input label="Autor:" type="string" [(ngModel)]="autor" disabled="{{edicao}}"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input label="Editora:" type="string" [(ngModel)]="editora" disabled="{{edicao}}"></ion-input>
+    </ion-item><ion-item>
+      <ion-input label="Genero:" type="Genero" [(ngModel)]="genero" disabled="{{edicao}}"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input label="Ano de Publicação:" type="number" [(ngModel)]="anoPublicacao" disabled="{{edicao}}"></ion-input>
+    </ion-item>
+    <ion-button expand="block" (click)="editar()" disabled="{{edicao}}">Salvar</ion-button> 
+    <ion-button expand="block" (click)="excluir()" color="danger" disabled="{{edicao}}">Excluir</ion-button> 
+  </ion-list>
+</ion-content>

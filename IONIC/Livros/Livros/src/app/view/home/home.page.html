@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Livraria
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<!--body-->
+<ion-content> 
+
+  <br/>
+  <!--*ngFor => loop-->
+  <ion-list *ngFor="let livro of lista_livros;"><!-- i recebe "zero" e vai até o ultimo contato-->
+    <ion-item (click)="editar(livro)">
+      <ion-label>{{livro.nome}}</ion-label>
+      <!--<ion-label>{{contato.telefone}}</ion-label>
+      <ion-label>{{contato.email}}</ion-label>-->
+    </ion-item>
+  </ion-list>
+
+  <ion-fab slot="fixed" vertical="bottom" horizontal="end" >
+    <ion-fab-button (click)="irParaCadastrar()">
+      <ion-icon name="person-add-outline"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+</ion-content>

@@ -23,3 +23,23 @@ npm i @angular/fire --save (BD)
   </ion-list>
 
 </ion-content>
+
+Firebase deploy:
+npm i -g firebase-tools
+firebase login
+yes
+firebase init
+yes
+
+(barra de espaço + enter)
+Hosting: Configure files for Firebase Hosting and (optionally) set up GitHub Action deploys
+Use an existing project
+appcontatos-386b4 (AppContatos)
+What do you want to use as your public directory? public(enter)
+Configure as a single-page app (rewrite all urls to /index.html)? No
+Set up automatic builds and deploys with GitHub? No
+ionic build --prod
+firebase.json => "public": "www",
+firebase deploy
+
+https://appcontatos-386b4.web.app/home

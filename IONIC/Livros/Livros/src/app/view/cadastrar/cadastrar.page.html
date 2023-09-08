@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>cadastrar</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item> <!-- ngModel => linka com as variaveis criadas na ts-->
+      <ion-input label="Nome:" placeholder="Insira o nome" [(ngModel)]="nome"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input label="Autor:" placeholder="Insira o nome do(a) autor(a) " type="string" [(ngModel)]="autor"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input label="Editora:" placeholder="Insira a Editora" type="string" [(ngModel)]="editora"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input label="Genero:" placeholder="Insira o Genero" type="Genero" [(ngModel)]="genero"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input label="Ano de Publicacao:" placeholder="Insira o Ano de Publicacao" type="number" [(ngModel)]="anoPublicacao"></ion-input>
+    </ion-item>
+    <ion-button expand="block" (click)="cadastrar()">Cadastrar</ion-button> 
+  </ion-list>
+</ion-content>
